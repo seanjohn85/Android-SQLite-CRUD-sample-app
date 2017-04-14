@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Sets the style for the items on a spinner-->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:layout_width="220dp"
+    android:layout_height="50dp"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:paddingTop="10dp"
+    android:shadowColor="@color/colorPrimary"
+    android:textAlignment="center"
+    android:textColor="@color/colorText"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:typeface="monospace" />
+

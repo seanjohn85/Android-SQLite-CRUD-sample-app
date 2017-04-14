@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?><!--create and edit fragment /screen-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="@color/colorGreen"
+    android:orientation="vertical">
+
+    <!-- holds the name feild -sticky top outside of scroller-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/label"
+            style="?android:listSeparatorTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/footballer_name_label"
+            android:textColor="@color/colorText"
+            android:textSize="22sp"
+            android:typeface="monospace" />
+
+
+        <EditText
+            android:id="@+id/footballer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/label"
+            android:layout_toRightOf="@+id/label"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Enter the name"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorText"
+            android:textSize="22sp"
+            android:typeface="monospace" />
+
+    </RelativeLayout>
+
+    <!--all the rest of the elements in a scroller -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGreen"
+            android:orientation="vertical">
+
+            <!--the number feild-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/num_lab"
+                    style="?android:listSeparatorTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/Number"
+                    android:textColor="@color/colorText"
+                    android:textSize="22sp"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/footballer_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/num_lab"
+                    android:layout_toRightOf="@+id/num_lab"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:inputType="number"
+                    android:textColor="@color/colorText"
+                    android:textSize="22sp"
+                    android:typeface="monospace" />
+            </RelativeLayout>
+
+            <!--the team selection drop down -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/currentteamlab"
+                    style="?android:listSeparatorTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/current_team"
+                    android:textColor="@color/colorText"
+
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/teams"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/currentteamlab"
+                    android:paddingLeft="10dp"
+                    android:textSize="16sp"
+
+                    ></Spinner>
+
+
+            </RelativeLayout>
+
+            <!--date picker spinner-->
+            <DatePicker
+                android:id="@+id/dob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner" />
+
+            <!--proflie image left / radio buttons right-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="20dp"
+                    android:contentDescription="@string/name_img" />
+
+                <RadioGroup
+                    android:id="@+id/position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/imageView"
+                    android:layout_toRightOf="@+id/imageView"
+                    android:buttonTint="@color/colorPrimary"
+                    android:orientation="vertical"
+                    android:textSize="22sp">
+
+                    <RadioButton
+                        android:id="@+id/goalkeeper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/goalkeeper"
+                        android:textSize="18sp"
+                        android:typeface="monospace" />
+
+                    <RadioButton
+                        android:id="@+id/defender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/defender"
+                        android:textSize="18sp"
+                        android:typeface="monospace" />
+
+                    <RadioButton
+                        android:id="@+id/midfield"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/midfeild"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/striker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/striker"
+                        android:textSize="18sp" />
+
+
+                </RadioGroup>
+            </RelativeLayout>
+
+            <!-- currently playing checkbox-->
+
+            <CheckBox
+                android:id="@+id/currently_playing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:buttonTint="@color/colorPrimary"
+                android:text="@string/currently_playing_label"
+                android:textColor="@color/colorText"
+                android:textSize="22sp" />
+
+            <!-- end screen buttons upload image and delete/create-->
+
+            <Button
+                android:id="@+id/upload_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+
+                android:background="@color/colorBlue"
+                android:textColor="@color/colorText"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorText"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Footballer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="player_name">Test</string>
+    <string name="playing">playing</string>
+    <string name="goalkeeper">Goalkeeper</string>
+    <string name="footballer_name_label">Name:</string>
+    <string name="name_img">name_img</string>
+    <string name="footballer">footballer</string>
+    <string name="defender">Defender</string>
+    <string name="midfeild">Midfeilder</string>
+    <string name="striker">Striker</string>
+    <string name="currently_playing_label">Is Currently Playing</string>
+    <string name="Number">Number:</string>
+    <string name="postiion" />
+    <string name="position">pos</string>
+    <string name="current_team">Team: </string>
+    <string name="num">num</string>
+    <!-- now moved to java code-->
+    <string-array name="teams">
+        <item>Manchester United</item>
+        <item>Manchester City</item>
+        <item>Arsenal</item>
+        <item>Chelsea</item>
+        <item>Everton</item>
+        <item>Tottenham Hotspur</item>
+        <item>Leeds United</item>
+    </string-array>
+</resources>
